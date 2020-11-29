@@ -29,20 +29,20 @@
 #### 3. Client pada subnet 1 mendapatkan range IP dari 192.168.0.10 sampai 192.168.0.100 dan 192.168.0.110 sampai 192.168.0.200.
 * setting konfigurasi range pada subnet 1 di `/etc/dhcp/dhcpd.conf` dengan 
 ```
-range '192.168.0.10' '192.168.0.100';
-range '192.168.0.100' '192.168.0.110';
+range 192.168.0.10 192.168.0.100;
+range 192.168.0.100 192.168.0.110;
 ```
 
 #### 4. Client pada subnet 3 mendapatkan range IP dari 192.168.1.50 sampai 192.168.1.70.
 * setting konfigurasi range pada subnet 3 di `/etc/dhcp/dhcpd.conf` dengan 
 ```
-range '192.168.1.50 ' '192.168.1.70';
+range 192.168.1.50 192.168.1.70;
 ```
 
 #### 5. Client mendapatkan DNS Malang dan DNS 202.46.129.2 dari DHCP
 * setting konfigurasi domain-name-server pada subnet 1 dan 3 menjadi berikut 
 ```
-option domain-name-servers '202.46.129.2', '10.151.83.66';
+option domain-name-servers 202.46.129.2, 10.151.83.66;
 ```
 #### 6. Client di subnet 1 mendapatkan peminjaman alamat IP selama 5 menit, sedangkan client pada subnet 3 mendapatkan peminjaman IP selama 10 menit.
 * Setting konfigurasi waktu pada subnet 1 selama 5 menit(300 detik) dan pada subnet 2 selama 10 menit(60 detik)
